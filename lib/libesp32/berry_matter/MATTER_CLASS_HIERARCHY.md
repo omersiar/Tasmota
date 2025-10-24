@@ -34,6 +34,7 @@ Matter_Plugin (Base Class)
     ├── Matter_Plugin_Shutter
     │   └── Matter_Plugin_ShutterTilt
     ├── Matter_Plugin_Sensor
+    │   ├── Matter_Plugin_Sensor_Thermostat
     │   ├── Matter_Plugin_Sensor_Temp
     │   │   ├── Matter_Plugin_Bridge_Sensor_Temp
     │   │   ├── Matter_Plugin_Virt_Sensor_Temp
@@ -184,6 +185,10 @@ static var CLUSTERS = { 0x001D: [0,1,2,3] }  # Descriptor cluster
 
 ## Specific Sensor Implementations
 
+### Matter_Plugin_Sensor_Thermostat
+- **Matter_Plugin_Sensor_Temp**: `"thermostat"` → Device Type `0x0301`
+- **Clusters**: `0x0201` (LocalTemperature, OccupiedHeatingSetpoint, SystemMode)
+
 ### Temperature Sensors
 - **Matter_Plugin_Sensor_Temp**: `"temperature"` → Device Type `0x0302`
 - **Clusters**: `0x0402` (Temperature Measurement)
@@ -326,6 +331,7 @@ The Matter implementation uses a hierarchical approach for plugin selection:
 | relay | On/Off Plug-in Unit | 0x010A | Generic relay/switch |
 | fan | Fan | 0x002B | Fan control |
 | shutter | Window Covering | 0x0202 | Window covering |
+| thermostat | Thermostat | 0x0301 | Native Tasmota Thermostat |
 | temperature | Temperature Sensor | 0x0302 | Temperature measurement |
 | humidity | Humidity Sensor | 0x0307 | Humidity measurement |
 | pressure | Pressure Sensor | 0x0305 | Pressure measurement |
@@ -347,6 +353,7 @@ The Matter implementation uses a hierarchical approach for plugin selection:
 - **0x0300**: Color Control (color lights)
 - **0x0202**: Fan Control (fans)
 - **0x0102**: Window Covering (shutters)
+- **0x0201**: Thermostat (thermostat)
 - **0x0402**: Temperature Measurement (temperature sensors)
 - **0x0405**: Relative Humidity Measurement (humidity sensors)
 - **0x0403**: Pressure Measurement (pressure sensors)

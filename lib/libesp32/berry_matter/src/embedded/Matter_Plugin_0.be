@@ -51,6 +51,7 @@ class Matter_Plugin
     # 0x0046: 0x04,                           # LITS: LongIdleTimeSupport
     0x0102: 1 + 4,                          # Lift + PA_LF
     0x0202: 2,                              # Fan: Auto
+    0x0201: 1,                              # Thermostat: HEAT
   }
   # `CLUSTER_REVISIONS` contains revision numbers for each cluster, or `1` if not present
   static var CLUSTER_REVISIONS = {
@@ -84,7 +85,7 @@ class Matter_Plugin
     0x0101: 7,                              # Added support for European door locks (unbolt feature)
     0x0102: 5,                              # New data model format and notation
     0x0200: 4,                              # Added feature map
-    0x0201: 6,                              # Introduced the LTNE feature and adapted text (spec issue #5778)
+    0x0201: 9,                              # Removed AlarmMask attribute and AlarmCodeBitmap Type
     0x0202: 4,                              # Change conformance for FanModeSe­ quenceEnum
     0x0204: 2,                              # New data model format and notation, added "Conversion of Temperature Values for Display" section
     0x0300: 6,                              # Added clarifications to Scenes support for Matter

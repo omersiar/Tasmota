@@ -33,7 +33,7 @@ import matter
 #################################################################################
 class Matter_UI
   static var _CLASSES_TYPES_STD =
-                              "|relay|light0|light1|light2|light3|shutter|shutter+tilt"
+                              "|relay|light0|light1|light2|light3|shutter|shutter+tilt|thermostat"
                               "|gensw_btn"
                               "|temperature|pressure|illuminance|humidity|occupancy|onoff|contact|flow|rain|waterleak"
                               "|airquality"
